@@ -9,6 +9,12 @@
   function MainController($timeout, webDevTec, toastr) {
     var vm = this;
 
+    vm.initialize = function(){
+
+      // EventsServices.start();
+
+    };
+
     Highcharts.chart('container', {
       title: {
         text: 'Temperature Data'
@@ -51,5 +57,7 @@
         awesomeThing.rank = Math.random();
       });
     }
+
+    vm.initialize();
   }
 })();
