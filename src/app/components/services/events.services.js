@@ -2,15 +2,11 @@
  * Created by micky on 19-11-16.
  */
 
-(function() {
+(function () {
   'use strict';
-
-  /*global EventSource*/
-
-  angular.module('umawaUi').factory('EventsServices', function () {
-
+  angular.module('umawaUi').factory('EventsServices', function (URL_SERVER) {
     var evtSource,
-      eventUrl = 'http://192.168.3.110:3000/',
+      eventUrl = URL_SERVER,
       running = false;
 
     return {
@@ -44,5 +40,5 @@
         return running;
       }
     };
-  })()
-});
+  });
+})();
