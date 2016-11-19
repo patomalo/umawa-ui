@@ -6,11 +6,11 @@ UMAWA - UI
 Steps for run the app
 ---------------------
 
-Clone the project
-cd to project
-npm install
-bower install
-gulp serve
++ Clone the project
++ cd to project
++ npm install
++ bower install
++ gulp serve
 
 Running a production server
 ---------------------------
