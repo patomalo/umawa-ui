@@ -15,10 +15,8 @@
 <div id="main">
 
   <!--<span style="font-size:30px;cursor:pointer" ng-click="switchSidebar()">&#9776;</span>-->
-  <!--<div>-->
-  <!--<div ng-include="'app/component s/water-flow/waterFlow.html'"></div>-->
-  <!--</div>-->
-  <div class="container fake-container">
+
+  <div class="container fake-container" ng-show="!sidebarFlag">
     <div ng-controller="PipeController">
       <!--<p><a href="#" class="start">Start the water!</a><a href="#" class="reset">Reset</a></p>-->
       <div class="tank">
@@ -44,8 +42,19 @@
     </div>
 
   </div>
+  <div ng-show="!sidebarFlag">
+    <div ng-include="'app/components/water-flow/waterFlow.html'"></div>
+    <!--<span>Flujo del Agua</span>-->
 
-    <!--<div id="container" ng-show="sidebarFlag">Placeholder for chart</div>-->
+  </div>
+
+  <div ng-show="sidebarFlag">
+    <div id="container1" ng-show="flags.uno">Placeholder for chart</div>
+    <div id="container2" ng-show="flags.dos">Placeholder for chart</div>
+    <div id="container3" ng-show="flags.tres">Placeholder for chart</div>
+    <div id="container4" ng-show="flags.cuatro">Placeholder for chart</div>
+  </div>
+
   </div>
 </div>
 
