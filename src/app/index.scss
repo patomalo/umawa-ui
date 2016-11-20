@@ -27,6 +27,16 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   }
 }
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-image: url("http://dtwnews.com/wp-content/uploads/2015/07/water-system.jpg");
+  //background-size: 100%;
+  background: #E3E3E3;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
