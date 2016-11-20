@@ -23,6 +23,10 @@
       else{
         $scope.closeNav();
       }
+      EventsServices.start(pipeBroke);
+    };
+    var pipeBroke = function(event){
+      // console.log(JSON.parse(event.data));
     };
 
     $scope.openNav = function () {
