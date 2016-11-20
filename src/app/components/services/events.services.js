@@ -6,7 +6,7 @@
   'use strict';
   angular.module('umawaUi').factory('EventsServices', function (URL_SERVER) {
     var evtSource,
-      eventUrl = URL_SERVER,
+      eventUrl = URL_SERVER+'brokenPipe',
       running = false;
 
     return {
@@ -14,6 +14,31 @@
         if (!this.isRunning()) {
           evtSource = new EventSource(eventUrl, {withCredentials: false});
           running = true;
+          evtSource.addEventListener('brokenPipe', function (boom) {
+            // console.log('boom-->', boom);
+          });
+
+          evtSource.onmessage = function(event) {
+            // document.getElementById("result").innerHTML += event.data + "<br>";
+            // console.log('--->', event);
+          };
+
+
+          console.log('boom');
+          var source = new EventSource('http://192.168.3.110:8080/brokenPipe', {withCredentials: false});
+
+          source.addEventListener('open', function(e) {
+           // console.log('gg', e)
+          }, false);
+          source.onmessage = function(e) {
+            // console.log('ee', e)
+          };
+          // document.getElementById('stopButton').onclick=function(){
+          //
+          // }
+
+
+
         }
       },
       stop: function () {
