@@ -48,7 +48,8 @@
 
     $scope.openNav = function () {
       document.getElementById("mySidenav").style.width = "42%";
-      document.getElementById("main").style.marginLeft = "58%";
+      document.getElementById("main").style.marginLeft = "650px";
+      $("#main").css('width','500px !important');
       $scope.sidebarFlag = true;
     };
 
