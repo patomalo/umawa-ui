@@ -30,8 +30,8 @@
     };
 
     $scope.openNav = function () {
-      document.getElementById("mySidenav").style.width = "50%";
-      document.getElementById("main").style.marginLeft = "50%";
+      document.getElementById("mySidenav").style.width = "40%";
+      document.getElementById("main").style.marginLeft = "60%";
     };
 
     $scope.closeNav = function(){

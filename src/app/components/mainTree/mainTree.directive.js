@@ -20,27 +20,27 @@
 
         var treeData = [
           {
-            "name": "M",
+            "name": "Master",
             "parent": "null",
             "children": [
               {
-                "name": "Level 2: A",
+                "name": "Sensores",
                 "parent": "Top Level",
                 "children": [
                   {
-                    "name": "Son of A",
+                    "name": "Luz",
                     "parent": "Level 2: A"
                   },
                   {
-                    "name": "Daughter of A",
+                    "name": "Hum. Suelo",
                     "parent": "Level 2: A"
                   },
                   {
-                    "name": "Daughter of A",
+                    "name": "Hum. Relativa",
                     "parent": "Level 2: A"
                   },
                   {
-                    "name": "Daughter of A",
+                    "name": "Flujo",
                     "parent": "Level 2: A"
                   }
                 ]
@@ -51,7 +51,7 @@
 
 
         // ************** Generate the tree diagram	 *****************
-        var margin = {top: 20, right: 120, bottom: 20, left: 120},
+        var margin = {top: 20, right: 120, bottom: 20, left: 70},
           width = 960 - margin.right - margin.left,
           height = 500 - margin.top - margin.bottom;
 
@@ -107,7 +107,8 @@
             .attr("dy", ".35em")
             .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
             .text(function(d) { return d.name; })
-            .style("fill-opacity", 1e-6);
+            .style("fill-opacity", 1e-6)
+            .style("fill", "rgb(193, 193, 183)");
 
           // Transition nodes to their new position.
           var nodeUpdate = node.transition()
@@ -116,7 +117,7 @@
 
           nodeUpdate.select("circle")
             .attr("r", 10)
-            .style("fill", function(d) { return d._children ? "lightsteelblue" : "rgb(70, 130, 180)"; });
+            .style("fill", function(d) { return d._children ? "lightsteelblue" : "#3fd14b"; });
 
           nodeUpdate.select("text")
             .style("fill-opacity", 1);
