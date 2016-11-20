@@ -10,15 +10,15 @@
     var vm = this;
 
     vm.initialize = function () {
-      EventsServices.start();
-
-      EventsServices.addListeners({
-        open: function (msg) {
-          console.log('msg')
-        }, error: function (data) {
-          console.log('error-->', data)
-        }
-      });
+      // EventsServices.start();
+      //
+      // EventsServices.addListeners({
+      //   open: function (msg) {
+      //     console.log('msg')
+      //   }, error: function (data) {
+      //     console.log('error-->', data)
+      //   }
+      // });
     };
 
     $scope.openNav = function () {
