@@ -189,6 +189,10 @@
       }]
     });
 
+    $scope.openToast = function(){
+      toastr.warning('Sensor del nodo N '+ Math.floor(Math.random() * 90 + 10) + ' slocalizo fuga en la tuberia N ' + Math.floor(Math.random() * 90 + 10));
+    };
+
     vm.initialize();
   }
 })();
