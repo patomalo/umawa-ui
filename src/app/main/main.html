@@ -1,3 +1,19 @@
+<!--<div class="container">-->
+
+<!--<div id="mySidenav" class="sidenav" ng-click="closeNav()">-->
+<!--<a href="javascript:void(0)" class="closebtn" >&times;</a>-->
+<!--</div>-->
+
+<!--<div id="main">-->
+<!--<h5>Jenecherú</h5>-->
+<!--<h2>UMAWA</h2>-->
+
+<!--<span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776; open</span>-->
+<!--<div id="container">Placeholder for chart</div>-->
+<!--<div ng-include="'app/components/water-flow/waterFlow.html'"></div>-->
+<!--</div>-->
+
+<!--</div>-->
 
 <div>
   <acme-navbar creation-date="main.creationDate"></acme-navbar>
@@ -17,47 +33,35 @@
   <!--<div>-->
   <!--<div ng-include="'app/component s/water-flow/waterFlow.html'"></div>-->
   <!--</div>-->
-  <div class="container">
-    <div ng-controller="PipeController">
-      <!--<p><a href="#" class="start">Start the water!</a><a href="#" class="reset">Reset</a></p>-->
-      <div class="tank">
-        <div style="
+
+
+
+<div class="container fake-container">
+  <div ng-controller="PipeController">
+    <!--<p><a href="#" class="start">Start the water!</a><a href="#" class="reset">Reset</a></p>-->
+    <div class="tank">
+      <div style="
           margin-top: 55px;
           z-index:101;
           position: absolute;
           left:210px;
           width: 40px;
-          height: 40px;
-         background-image: url('http://image.flaticon.com/icons/png/128/27/27743.png');
-         background-size: 40px 40px;"
-             ng-click="switchSidebar()">
-        </div>
-        <div class="tube x" style="width: 200px; top: 20px; left: 20px; z-index: 6;">
-          <div class="water left"></div>
-        </div>
-        <div class="tube y" style="height: 100px; top: 20px; left: 220px; z-index: 5;">
-          <div class="water top"></div>
-        </div>
-        <div class="tube x" style="width: 100px; top: 110px; left: 135px; z-index: 4;">
-          <div class="water right"></div>
-        </div>
-        <div class="tube y" style="height: 50px; top: 75px; left: 135px; z-index: 3;">
-          <div class="water bottom"></div>
-        </div>
-        <div class="tube x" style="width: 50px; top: 75px; left: 100px; z-index: 2;">
-          <div class="water right"></div>
-        </div>
-        <div class="tube y" style="height: 150px; top: 75px; left: 100px; z-index: 1;">
-          <div class="water top"></div>
-        </div>
-        <div class="bg">
-        </div>
+          height: 40px;"
+           ng-click="switchSidebar()">
+        <span class="beacon"></span>
+      </div>
+      <div class="tube x" style="width: 200px; top: 20px; left: 20px; z-index: 6;"><div class="water left"></div></div>
+      <div class="tube y" style="height: 100px; top: 20px; left: 220px; z-index: 5;"><div class="water top"></div></div>
+      <div class="tube x" style="width: 100px; top: 110px; left: 135px; z-index: 4;"><div class="water right"></div></div>
+      <div class="tube y" style="height: 50px; top: 75px; left: 135px; z-index: 3;"><div class="water bottom"></div></div>
+      <div class="tube x" style="width: 50px; top: 75px; left: 100px; z-index: 2;"><div class="water right"></div></div>
+      <div class="tube y" style="height: 150px; top: 75px; left: 100px; z-index: 1;"><div class="water top"></div></div>
+      <div class="bg">
       </div>
     </div>
-
-    <div id="container" ng-show="sidebarFlag">Placeholder for chart</div>
   </div>
+
 </div>
 
-
+</div>
 
