@@ -14,7 +14,8 @@
       // replace: true,
       templateUrl: '/app/components/mainTree/mainTree.tmpl.html',
       scope: {
-        formData: '='
+        formData: '=',
+        clickSensor:'='
       },
       link: function link(scope, element, attrs) {
 
@@ -22,6 +23,7 @@
           {
             "name": "Master",
             "parent": "null",
+            "code":"master",
             "children": [
               {
                 "name": "Sensores",
@@ -29,19 +31,27 @@
                 "children": [
                   {
                     "name": "Luz",
-                    "parent": "Level 2: A"
+                    "parent": "Level 2: A",
+                    "nodeId": 10,
+                    "code":"luz"
                   },
                   {
                     "name": "Hum. Suelo",
-                    "parent": "Level 2: A"
+                    "parent": "Level 2: A",
+                    "nodeId": 10,
+                    "code":"hsuelo"
                   },
                   {
                     "name": "Hum. Relativa",
-                    "parent": "Level 2: A"
+                    "parent": "Level 2: A",
+                    "nodeId": 10,
+                    "code":"hrelativa"
                   },
                   {
                     "name": "Flujo",
-                    "parent": "Level 2: A"
+                    "parent": "Level 2: A",
+                    "nodeId": 10,
+                    "code":"flujo"
                   }
                 ]
               }
@@ -170,12 +180,13 @@
         // Toggle children on click.
         function click(d) {
           if (d.children) {
-            d._children = d.children;
-            d.children = null;
+            // d._children = d.children;
+            // d.children = null;
           } else {
             d.children = d._children;
             d._children = null;
           }
+          scope.clickSensor(d);
           update(d);
         }
       }

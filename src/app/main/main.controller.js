@@ -42,6 +42,11 @@
       $scope.sidebarFlag = false;
     };
 
+    $scope.clickSensor = function(sensor){
+      console.log('sensor', sensor);
+    };
+
+
     Highcharts.chart('container', {
       title: {
         text: 'Temperature Data'
