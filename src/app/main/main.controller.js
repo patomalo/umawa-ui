@@ -22,10 +22,8 @@
     };
 
     $scope.openNav = function () {
-      console.log('bla');
       document.getElementById("mySidenav").style.width = "50%";
       document.getElementById("main").style.marginLeft = "50%";
-//      document.getElementById("container").style.marginLeft = "50%";
     };
 
     $scope.closeNav = function(){
