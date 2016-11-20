@@ -10,15 +10,19 @@
     var vm = this;
 
     vm.initialize = function () {
-      // EventsServices.start();
-      //
-      // EventsServices.addListeners({
-      //   open: function (msg) {
-      //     console.log('msg')
-      //   }, error: function (data) {
-      //     console.log('error-->', data)
-      //   }
-      // });
+
+    };
+
+    $scope.sidebarFlag = false;
+
+    $scope.switchSidebar = function(){
+      $scope.sidebarFlag = !$scope.sidebarFlag;
+      if($scope.sidebarFlag){
+        $scope.openNav();
+      }
+      else{
+        $scope.closeNav();
+      }
     };
 
     $scope.openNav = function () {
