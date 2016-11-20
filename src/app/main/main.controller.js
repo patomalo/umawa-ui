@@ -6,8 +6,16 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, webDevTec, toastr, EventsServices) {
+  function MainController($scope, $timeout, webDevTec, toastr, EventsServices, RestServices) {
     var vm = this;
+    $scope.data = {
+      all: [],
+
+      humiditySensorRate: [],
+      pressionSensorRate: [],
+      soilHumidityRate: []
+    };
+
     $scope.sidebarFlag = false;
 
     vm.initialize = function () {
@@ -44,6 +52,49 @@
 
     $scope.clickSensor = function(sensor){
       console.log('sensor', sensor);
+    };
+
+    var getAllData = function () {
+      RestServices.allHistory().then(function (response) {
+        console.log('response', response);
+      })
+    };
+
+    var updateAllData = function () {
+      RestServices.allUltimateValue().then(function(response){
+        $scope.data.all.push(response);
+      })
+    };
+    //
+    // humiditySensorRate: [],
+    //   pressionSensorRate: [],
+    //   soilHumidityRate: []
+
+    ///////
+    var getAllHumity = function(){
+
+    };
+
+    var updateHumity = function () {
+
+    };
+
+    ///////
+    var getAllPression = function(){
+
+    };
+
+    var updatePression = function () {
+
+    };
+
+    ////////
+    var getAllSoilHumidity = function(){
+
+    };
+
+    var updateSoilHumidity = function () {
+
     };
 
 
