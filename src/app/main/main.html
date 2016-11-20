@@ -1,8 +1,17 @@
 <div class="container">
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+
+  <div id="mySidenav" class="sidenav" ng-click="closeNav()">
+    <a href="javascript:void(0)" class="closebtn" >&times;</a>
   </div>
-  <div id="container">Placeholder for chart</div>
+
+  <div id="main">
+    <h5>Jenecherú</h5>
+    <h2>UMAWA</h2>
+
+    <span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776; open</span>
+    <div id="container">Placeholder for chart</div>
+  </div>
+
 </div>
 
 
